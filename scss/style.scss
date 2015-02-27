@@ -287,6 +287,11 @@ header {
 			line-height: 1;
 			font-size: 1.6rem;
 			border-bottom: none;
+
+			/* Prevent .cd-subnav-trigger flicker is Safari */
+			@include transform(translateZ(0));
+			@include backface-visibility(hidden);
+			
 			@include transition(opacity .2s);
 		}
 
