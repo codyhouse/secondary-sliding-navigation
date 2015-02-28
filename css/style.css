@@ -343,6 +343,8 @@ header::before {
     transition: opacity 0.2s;
   }
   .cd-main-nav li a:not(.cd-subnav-trigger):hover {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     opacity: .6;
   }
   .cd-main-nav .go-back {
@@ -492,6 +494,13 @@ header::before {
 @media only screen and (min-width: 1024px) {
   .cd-main-content {
     padding-top: 80px;
+  }
+  .cd-main-content.nav-is-visible {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
