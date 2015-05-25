@@ -42,7 +42,7 @@ jQuery(document).ready(function($){
 	}
 
 	function checkWindowWidth() {
-		var mq = window.getComputedStyle(document.querySelector('header'), '::before').getPropertyValue('content').replace(/"/g, '');
+		var mq = window.getComputedStyle(document.querySelector('header'), '::before').getPropertyValue('content').replace(/"/g, '').replace(/'/g, "");
 		return ( mq == 'mobile' ) ? false : true;
 	}
 });
